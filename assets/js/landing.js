@@ -32,7 +32,7 @@
   if (!form) return;
 
   // Earliest selectable date is tomorrow
-  var dateInput = form.querySelector('#preferred_date');
+  var dateInput = form.querySelector('#meeting_date');
   if (dateInput) {
     var t = new Date(); t.setDate(t.getDate() + 1);
     dateInput.min = t.toISOString().slice(0, 10);
@@ -51,7 +51,12 @@
       if (f.type === 'checkbox' && !f.checked) msg = 'Please confirm to continue.';
       else if (f.type !== 'checkbox' && !f.value.trim()) msg = 'This field is required.';
       else if (f.type === 'email' && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(f.value)) msg = 'Please enter a valid email address.';
-      else if (f.type === 'tel' && f.value.replace(/\D/g, '').length < 10) msg = 'Please enter a 10-digit phone number.';
+      else if (f.id === 'zip' && !/^\d{5}(-\d{4})?$/.test(f.value.trim())) msg = 'Please enter a 5-digit ZIP code.';
+      else if (f.type === 'date') {
+        var d = new Date(f.value + 'T12:00:00');
+        if (f.min && f.value < f.min) msg = 'Please choose a date after today.';
+        else if (d.getDay() === 0 || d.getDay() === 6) msg = 'Please choose a weekday (Monday to Friday).';
+      }
       setError(f, msg);
       if (msg) { ok = false; first = first || f; }
     });

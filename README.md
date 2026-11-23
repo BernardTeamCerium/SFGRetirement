@@ -3,7 +3,7 @@
 Static marketing landing page for Troy Sibley, styled to match sibleyfinancialgroup.com.
 
 - `index.html`: hero video, lifetime-income copy, meeting overview, advisor bio, and calls to action
-- `book.html`: appointment request form (Netlify Forms, form name `book-troy`)
+- `book.html`: Netlify appointment form (`book-troy`): full name, email, investable assets, ZIP code, estimated meeting date and time
 - `thank-you.html`: confirmation page shown after the form is submitted
 
 ## Video
