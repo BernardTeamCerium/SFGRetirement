@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Book Your Meeting With Troy Sibley | Sibley Financial Group</title>
+<meta name="description" content="Request a complimentary, no-obligation retirement income meeting with award-winning advisor Troy Sibley of Sibley Financial Group in Mandeville, Louisiana.">
+<meta name="theme-color" content="#0A2044">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/img/icon-32.png">
+<link rel="apple-touch-icon" href="assets/img/icon-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&amp;family=Inter:wght@400;500;600;700&amp;display=swap">
+<link rel="stylesheet" href="assets/css/landing.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="shell">
+    <a class="brand" href="index.html" aria-label="Back to the landing page">
+      <img src="assets/img/crest-sm.png" alt="Sibley Financial Group crest" class="brand__mark" width="48" height="48">
+      <span class="brand__text">
+        <span class="brand__name">Sibley</span>
+        <span class="brand__sub">Financial Group</span>
+      </span>
+    </a>
+    <div class="header-actions">
+      <a class="header-phone" href="tel:+19852312167">(985) 231-2167</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="book-hero">
+    <div class="shell--narrow">
+      <p class="eyebrow eyebrow--invert">Complimentary &middot; No obligation</p>
+      <h1>Book your meeting with Troy Sibley</h1>
+      <p>Tell us a little about yourself and when you&rsquo;d like to meet. Our office will reach out within one business day to confirm your appointment.</p>
+    </div>
+  </section>
+
+  <div class="shell book-layout">
+    <form class="form-card" id="booking-form" name="book-troy" method="POST"
+          action="thank-you.html"
+          data-netlify="true" data-netlify-honeypot="company_website" novalidate>
+      <!-- Submissions are handled by Netlify Forms (form name: "book-troy")
+           and appear under Forms in the Netlify dashboard. Add a notification
+           email there so new bookings reach the office. -->
+      <input type="hidden" name="form-name" value="book-troy">
+      <input type="hidden" name="source" value="Troy Sibley video landing page">
+
+      <h2>Request your appointment</h2>
+      <p>Fields marked <span class="req">*</span> are required. It takes about a minute.</p>
+
+      <fieldset class="fieldset">
+        <legend>Your details</legend>
+        <div class="grid">
+          <div class="field">
+            <label for="first_name">First name <span class="req" aria-hidden="true">*</span></label>
+            <input type="text" id="first_name" name="first_name" autocomplete="given-name" required>
+            <p class="field__error" id="first_name-error" aria-live="polite"></p>
+          </div>
+          <div class="field">
+            <label for="last_name">Last name <span class="req" aria-hidden="true">*</span></label>
+            <input type="text" id="last_name" name="last_name" autocomplete="family-name" required>
+            <p class="field__error" id="last_name-error" aria-live="polite"></p>
+          </div>
+          <div class="field">
+            <label for="email">Email address <span class="req" aria-hidden="true">*</span></label>
+            <input type="email" id="email" name="email" autocomplete="email" required>
+            <p class="field__error" id="email-error" aria-live="polite"></p>
+          </div>
+          <div class="field">
+            <label for="phone">Phone number <span class="req" aria-hidden="true">*</span></label>
+            <input type="tel" id="phone" name="phone" autocomplete="tel" inputmode="tel" required>
+            <p class="field__error" id="phone-error" aria-live="polite"></p>
+          </div>
+          <div class="field">
+            <label for="zip">ZIP code</label>
+            <input type="text" id="zip" name="zip" autocomplete="postal-code" inputmode="numeric" maxlength="10">
+          </div>
+          <div class="field">
+            <label for="age">Your age range</label>
+            <select id="age" name="age_range">
+              <option value="">Select&hellip;</option>
+              <option>Under 50</option>
+              <option>50&ndash;54</option>
+              <option>55&ndash;59</option>
+              <option>60&ndash;64</option>
+              <option>65&ndash;69</option>
+              <option>70+</option>
+            </select>
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset class="fieldset">
+        <legend>Your meeting</legend>
+        <div class="grid">
+          <div class="field field--full">
+            <span style="display:block;font-size:.875rem;font-weight:600;color:var(--ink);margin-bottom:.5rem">How would you like to meet?</span>
+            <div class="choices" role="radiogroup" aria-label="Meeting format">
+              <label class="choice"><input type="radio" name="meeting_format" value="In person (Mandeville office)" checked><span>In person</span></label>
+              <label class="choice"><input type="radio" name="meeting_format" value="Phone call"><span>Phone</span></label>
+              <label class="choice"><input type="radio" name="meeting_format" value="Video call"><span>Video call</span></label>
+            </div>
+          </div>
+          <div class="field">
+            <label for="preferred_date">Preferred date</label>
+            <input type="date" id="preferred_date" name="preferred_date">
+          </div>
+          <div class="field">
+            <label for="preferred_time">Preferred time</label>
+            <select id="preferred_time" name="preferred_time">
+              <option>Morning (9am &ndash; 12pm CT)</option>
+              <option>Afternoon (12pm &ndash; 5pm CT)</option>
+              <option>Flexible / whatever works</option>
+            </select>
+          </div>
+          <div class="field field--full">
+            <span style="display:block;font-size:.875rem;font-weight:600;color:var(--ink);margin-bottom:.5rem">What matters most to you? <span style="font-weight:400;color:var(--ink-mute)">(choose any)</span></span>
+            <div class="choices">
+              <label class="choice"><input type="checkbox" name="goals" value="Lifetime income / pension"><span>Lifetime income</span></label>
+              <label class="choice"><input type="checkbox" name="goals" value="Protection from market losses"><span>Protect from losses</span></label>
+              <label class="choice"><input type="checkbox" name="goals" value="Growth potential"><span>Growth potential</span></label>
+              <label class="choice"><input type="checkbox" name="goals" value="401(k) / IRA rollover"><span>401(k) / IRA rollover</span></label>
+              <label class="choice"><input type="checkbox" name="goals" value="Tax & Social Security"><span>Taxes &amp; Social Security</span></label>
+              <label class="choice"><input type="checkbox" name="goals" value="Legacy & estate"><span>Legacy &amp; estate</span></label>
+            </div>
+          </div>
+          <div class="field field--full">
+            <label for="assets">Estimated retirement savings</label>
+            <select id="assets" name="estimated_assets">
+              <option value="">Prefer not to say</option>
+              <option>Under $250,000</option>
+              <option>$250,000 &ndash; $500,000</option>
+              <option>$500,000 &ndash; $1 million</option>
+              <option>$1 million &ndash; $2.5 million</option>
+              <option>$2.5 million or more</option>
+            </select>
+            <p class="field__hint">Optional, and a range is plenty. We never ask for account numbers or balances.</p>
+          </div>
+          <div class="field field--full">
+            <label for="message">Anything you&rsquo;d like Troy to know?</label>
+            <textarea id="message" name="message" rows="4"
+              placeholder="For example: I'm 61, planning to retire in two years, and I want to make sure my savings can replace my paycheck."></textarea>
+            <p class="field__hint">Please don&rsquo;t include account numbers, Social Security numbers or other sensitive information.</p>
+          </div>
+        </div>
+      </fieldset>
+
+      <div class="visually-hidden" aria-hidden="true">
+        <label for="company_website">Leave this field blank</label>
+        <input type="text" id="company_website" name="company_website" tabindex="-1" autocomplete="off">
+      </div>
+
+      <div class="field" style="margin-top:1.75rem">
+        <label class="consent" for="consent">
+          <input type="checkbox" id="consent" name="consent" required>
+          <span>I agree to be contacted by Sibley Financial Group by phone, text or email about my appointment. I understand this request does not create an advisory relationship. <span class="req" aria-hidden="true">*</span></span>
+        </label>
+        <p class="field__error" id="consent-error" aria-live="polite"></p>
+      </div>
+
+      <div style="margin-top:1.75rem">
+        <button type="submit" class="btn btn--crimson btn--lg btn--block">Request My Meeting</button>
+        <p class="btn-note center">Complimentary &middot; No cost, no obligation, no pressure</p>
+      </div>
+    </form>
+
+    <aside class="aside-card">
+      <img src="assets/img/troy-sibley-headshot.jpg" alt="C. Troy Sibley" width="900" height="1125" loading="lazy">
+      <div class="aside-card__body">
+        <h3>C. Troy Sibley</h3>
+        <p class="role">President &amp; Founder</p>
+        <ul>
+          <li><span>See how to turn your savings into lifetime, pension-like income</span></li>
+          <li><span>Learn how to pursue upside while protecting against downside</span></li>
+          <li><span>Get plain-English answers from an award-winning advisor with 25+ years of experience</span></li>
+          <li><span>Leave with clear next steps toward your goals&nbsp;&mdash; freedom, legacy and more</span></li>
+        </ul>
+        <div class="aside-call">
+          Prefer to talk now?
+          <a href="tel:+19852312167">(985) 231-2167</a>
+          Mon&ndash;Fri, 9:00am&ndash;5:00pm CT
+        </div>
+      </div>
+    </aside>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="shell">
+    <div class="disclosure" style="margin-top:0;padding-top:0;border-top:0">
+      <p>Sibley Financial Group, powered by Allied Elite Financial. Insurance and annuity products are not insured by the FDIC or any federal government agency, are not deposits of or guaranteed by any bank, and guarantees are backed solely by the claims-paying ability of the issuing insurance company. Nothing on this page is individualized investment, legal or tax advice.</p>
+      <p>&copy; 2026 Sibley Financial Group. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/landing.js" defer></script>
+</body>
+</html>
