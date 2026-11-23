@@ -7,9 +7,8 @@ Static marketing landing page for Troy Sibley, styled to match sibleyfinancialgr
 - `thank-you.html`: confirmation page shown after the form is submitted
 
 ## Video
-The player tries `assets/video/troy-sibley-promo.mp4` first, then streams the original
-`.mov` from Dropbox. For the best playback on every browser, export the clip as H.264 MP4
-and save it at `assets/video/troy-sibley-promo.mp4`.
+The promo plays from `assets/video/troy-sibley-promo.mp4` (H.264, 1080p, web-optimized),
+converted from the original IMG_8980.mov. To swap the video, replace that file.
 
 ## Form submissions
 Deploy on Netlify and the form is detected automatically. Add a notification email under
