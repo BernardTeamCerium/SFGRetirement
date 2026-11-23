@@ -183,7 +183,28 @@ p + p { margin-top: 1em; }
   object-fit: contain;
   background: #000;
 }
+.video-frame { position: relative; }
 .video-frame.is-portrait { max-width: 440px; }
+.unmute {
+  position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);
+  display: inline-flex; align-items: center; gap: .6rem;
+  padding: .9rem 1.5rem;
+  font-size: .9375rem; font-weight: 600; letter-spacing: .04em; text-transform: uppercase;
+  color: #fff; background: rgba(184,16,32,.92);
+  border: 1px solid rgba(255,255,255,.35); border-radius: 999px;
+  box-shadow: 0 12px 30px -10px rgba(0,0,0,.6);
+  cursor: pointer;
+  transition: background-color .2s var(--ease), transform .2s var(--ease);
+}
+.unmute:hover { background: var(--crimson-700); transform: translate(-50%, -50%) scale(1.04); }
+.unmute svg { width: 22px; height: 22px; }
+@media (prefers-reduced-motion: no-preference) {
+  .unmute { animation: unmute-pulse 2.4s var(--ease) infinite; }
+  @keyframes unmute-pulse {
+    0%, 100% { box-shadow: 0 12px 30px -10px rgba(0,0,0,.6), 0 0 0 0 rgba(200,32,46,.55); }
+    50% { box-shadow: 0 12px 30px -10px rgba(0,0,0,.6), 0 0 0 14px rgba(200,32,46,0); }
+  }
+}
 .video-frame.is-portrait video { aspect-ratio: 9 / 16; }
 .video-caption {
   margin-top: 1rem; font-size: .875rem; color: var(--ink-invert-soft);

@@ -25,6 +25,22 @@
     };
     video.addEventListener('loadedmetadata', fit);
     fit();
+
+    /* Autoplay: browsers only allow it muted, so offer a one-tap "sound on" that restarts the clip */
+    var unmute = document.getElementById('unmute');
+    var showUnmute = function () { if (unmute && video.muted) unmute.hidden = false; };
+    var soundOn = function () {
+      video.muted = false;
+      video.currentTime = 0;
+      var p = video.play(); if (p && p.catch) p.catch(function () {});
+      if (unmute) unmute.hidden = true;
+    };
+    if (unmute) unmute.addEventListener('click', soundOn);
+    video.addEventListener('playing', showUnmute);
+    video.addEventListener('volumechange', function () { if (!video.muted && unmute) unmute.hidden = true; });
+    // Some browsers ignore the autoplay attribute; nudge playback once data is ready
+    var tryPlay = function () { var p = video.play(); if (p && p.catch) p.catch(function () { if (unmute) { unmute.hidden = false; } }); };
+    if (video.readyState >= 2) tryPlay(); else video.addEventListener('canplay', tryPlay, { once: true });
   }
 
   /* Booking form: validation + Netlify Forms AJAX submit */
