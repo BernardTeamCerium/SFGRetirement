@@ -196,6 +196,7 @@ p + p { margin-top: 1em; }
   cursor: pointer;
   transition: background-color .2s var(--ease), transform .2s var(--ease);
 }
+.unmute[hidden] { display: none; }
 .unmute:hover { background: var(--crimson-700); transform: translate(-50%, -50%) scale(1.04); }
 .unmute svg { width: 22px; height: 22px; }
 @media (prefers-reduced-motion: no-preference) {
