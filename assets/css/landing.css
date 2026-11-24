@@ -493,3 +493,15 @@ p + p { margin-top: 1em; }
 .field .choice { display: inline-block; margin: 0; font-weight: 400; }
 .field .consent { display: grid; font-weight: 400; margin: 0; }
 .advisor h2 { margin-bottom: 1rem; }
+
+/* Disclosures */
+.disclosure__title {
+  font-family: var(--font-body); font-size: .75rem; font-weight: 600;
+  letter-spacing: .18em; text-transform: uppercase; color: var(--silver-300);
+  margin-bottom: 1rem;
+}
+.disclosure strong { color: var(--ink-invert-soft); font-weight: 600; }
+.disclosure a { color: var(--ink-invert-soft); }
+.disclosure a:hover { color: #fff; }
+.disclosure__links { margin-top: 1.25rem !important; }
+.site-footer .disclosure:first-child { margin-top: 0; padding-top: 0; border-top: 0; }
